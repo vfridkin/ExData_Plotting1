@@ -19,7 +19,7 @@
   headings <- as.character(unname(unlist(headings[1,])))
 
   # Import data 
-  powerData <- read.table(fileName, sep = ";", col.names = headings, skip = skipRows, nrows = importRows)
+  powerData <- read.table(fileName, sep = ";", col.names = headings, skip = skipRows, nrows = importRows, na.strings="?")
   
 # Convert date column to date and time; remove time column
   dateTime <- paste(powerData$Date, powerData$Time)
